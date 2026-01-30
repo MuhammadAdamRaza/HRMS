@@ -157,8 +157,6 @@ def send_notification(recipient_id, message, title=None, type="info", related_id
         </html>
         """
         
-        # --- E. Send Async ---
-        # 👇 FIX: Email Subject mein Title use kiya
         email_subject = f"HRMS: {title}" if title else f"HRMS Notification: {type.title()}"
         
         msg = Message(

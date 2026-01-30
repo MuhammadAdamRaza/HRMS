@@ -66,7 +66,7 @@ class Notification(db.Model):
         new_notification = Notification(
             recipient_id=recipient_id,
             sender_id=sender_id,
-            title=title,  # <-- Saving title
+            title=title,  
             message=message,
             type=type,
             related_id=related_id

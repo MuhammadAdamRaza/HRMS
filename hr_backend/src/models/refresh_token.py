@@ -11,7 +11,7 @@ class RefreshToken(db.Model):
     created_at = db.Column(db.DateTime(timezone=True), default=lambda: datetime.now(timezone.utc))
     expires_at = db.Column(db.DateTime(timezone=True), nullable=False)
 
-
+    # 👇 YEH LINE UPDATE KI HAI (Cascade Fix for NotNullViolation)
     user = db.relationship(
         "User", 
         backref=db.backref("refresh_tokens", cascade="all, delete-orphan"), 
