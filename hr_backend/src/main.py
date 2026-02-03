@@ -19,7 +19,6 @@ from flasgger import Swagger
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_ROOT = os.path.dirname(BASE_DIR)
 
-# Matches: hr_backend/src/static
 STATIC_FOLDER = os.path.join(BASE_DIR, "static")
 
 load_dotenv(os.path.join(PROJECT_ROOT, ".env"))
